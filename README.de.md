@@ -14,7 +14,7 @@ Große Modelle laden im Hintergrund, Vorschaubilder erscheinen in der Miniaturan
 - **LDraw:** `.ldr`, `.mpd` (mehrere Dateien in einer), `.dat` – die Teile kommen aus deiner LDraw-Bibliothek (siehe unten)
 - **glTF** und **GLB**, **FBX**, **3DS**, **DXF**, **LWO** und **LWS** (LightWave), **AC** (AC3D), **ASE**, **DAE** (Collada), **3MF**, **AMF**, **X3D**, **MS3D**, **MD2**, **MD3**, **MD5MESH**, **MDC**, **COB**, **XGL**, **Q3O**, **Q3S**, **PMX**, **OGEX**
 
-Dateien mit einer mehrfach verwendeten Endung werden am Inhalt erkannt. Eine `configure.ac` oder eine fremde `.dat`-Datei öffnet sich deshalb weiter als Text.
+Dateien mit einer mehrfach verwendeten Endung werden am Inhalt erkannt. Eine `configure.ac` oder eine fremde `.dat`-Datei öffnet sich deshalb weiter als Text. DXF-Dateien, die nur 2D-Zeichnungen enthalten (Linien, Bögen, Text), überlässt 3divi dem nächsten Lister-Plugin.
 
 ## Funktionen
 
@@ -24,13 +24,15 @@ Dateien mit einer mehrfach verwendeten Endung werden am Inhalt erkannt. Eine `co
 - **Glättung:** Normalen der Datei behalten, flach (Facetten), 30°, 60° oder vollständig glatt – Flächen innerhalb des Winkels teilen sich eine glatte Normale
 - **Optimieren:** verschmilzt identische Eckpunkte und entfernt entartete Dreiecke
 - **Licht:** folgt der Kamera oder steht fest in der Szene; heller oder dunkler
-- **Transformieren:** um X, Y oder Z um 90° drehen, Oben-Achse wechseln (Z oben bei STL, PLY, 3DS, DXF; Y oben bei OBJ, glTF), zurücksetzen
+- **Transformieren:** um X, Y oder Z um 90° drehen, Oben-Achse wechseln (Z oben bei STL, PLY, 3DS, DXF; Y oben bei OBJ, glTF) – auf Wunsch je Dateiformat gemerkt (*Oben-Achse bei DXF-Dateien immer wechseln*) –, zurücksetzen
 - **Ansichten:** vorne, hinten, links, rechts, oben, unten (Ziffernblock), Achsen, Raster, Rückseiten ausblenden, Anti-Aliasing, optional FPS-Anzeige
+- **Symbolleiste:** die Ansichten, das Drehen um 90°, der Wechsel der Oben-Achse, Zurücksetzen, Darstellung, Raster und Achsen als Buttons, dazu ein Button für das ganze Menü (Taste O blendet sie aus oder ein)
+- **Vorige / nächste Datei:** Bild↑ / Bild↓ (oder die Pfeil-Buttons in der Symbolleiste) zeigen die vorige oder nächste Datei des Ordners, die 3divi unterstützt, in natürlicher Namensreihenfolge
 - **Speichern unter** STL, OBJ oder PLY im Kontextmenü – mit deiner Drehung, die Oben-Achse wird für das Zielformat umgerechnet
 - **Bild kopieren** (Strg+C) legt die aktuelle Ansicht in die Zwischenablage
 - **Vorschaubilder** in der Miniaturansicht des Total Commander (Dateien bis 96 MB)
 - **Laden im Hintergrund** mit Fortschrittsanzeige, auch große Modelle lassen den Total Commander nicht einfrieren
-- Statusleiste mit Format, Eckpunkten, Dreiecken, Texturen, Maßen und Dateigröße
+- Statusleiste mit Dateiname (abschaltbar), Format, Eckpunkten, Dreiecken, Texturen, Maßen und Dateigröße
 - Helles und dunkles Design im Windows-11-Look (automatisch wie Windows oder fest); deutsche und englische Oberfläche
 
 ## Download und Installation
@@ -38,7 +40,7 @@ Dateien mit einer mehrfach verwendeten Endung werden am Inhalt erkannt. Eine `co
 1. **`3divi.zip`** aus dem [neuesten Release](https://github.com/naderi/tc-3divi/releases/latest) herunterladen.
 2. Die ZIP-Datei im Total Commander öffnen (Enter auf der Datei) und die Frage nach der Installation des Plugins bestätigen.
 
-Die Einstellungen stehen in `3divi.ini` neben dem Plugin: `Mode`, `Grid`, `Axes`, `Bar`, `AA`, `Cull`, `Fps`, `Light`, `Gain`, `Theme` (0 automatisch, 1 hell, 2 dunkel) und `Language` (`de` oder `en`, sonst wie Windows).
+Die Einstellungen stehen in `3divi.ini` neben dem Plugin: `Mode`, `Grid`, `Axes`, `Bar`, `Toolbar`, `FileName`, `AA`, `Cull`, `Fps`, `Light`, `Gain`, `SwapUp_<FORMAT>` (z. B. `SwapUp_DXF=1`), `Theme` (0 automatisch, 1 hell, 2 dunkel) und `Language` (`de` oder `en`, sonst wie Windows).
 
 **Wenn du auch TreeView nutzt:** Beide Plugins öffnen `.dae`-Dateien. Stelle 3divi in der Liste der Lister-Plugins vor TreeView (*Konfigurieren > Optionen > Plugins*), dann öffnen sich Collada-Modelle hier, und andere XML-Dateien mit der Endung `.dae` gehen weiter an TreeView.
 
@@ -50,13 +52,14 @@ Die Einstellungen stehen in `3divi.ini` neben dem Plugin: `Mode`, `Grid`, `Axes`
 |---|---|
 | Rechtsklick, Menütaste | Kontextmenü mit allen Funktionen |
 | S | Nächste Darstellung |
-| G / A / B | Raster / Achsen / Statusleiste |
+| G / A / B / O | Raster / Achsen / Statusleiste / Symbolleiste |
 | T | Design: automatisch, hell, dunkel |
 | U | Oben-Achse wechseln (Z oder Y) |
 | X / Y / Z (+Umschalt) | Um 90° drehen (Umschalt: andere Richtung) |
 | R, Pos1, Num 0, Doppelklick | Ins Fenster einpassen |
 | Num 1, Num 3, Num 7 (+Strg) | Vorne, rechts, oben (Strg: hinten, links, unten) |
 | Pfeiltasten, + / − | Drehen, zoomen |
+| Bild↑ / Bild↓ | Vorige / nächste Datei des Ordners |
 | Strg+C | Bild kopieren |
 | F1 | Info |
 
