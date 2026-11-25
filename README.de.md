@@ -66,6 +66,14 @@ Die Einstellungen stehen in `3divi.ini` neben dem Plugin: `Mode`, `Grid`, `Axes`
 
 Alle anderen Tasten (Esc, N/P für die nächste und vorige Datei, F-Tasten …) gehen an den Total Commander.
 
+## Sprachen
+
+3divi gibt es auf Englisch, Deutsch, Spanisch, Französisch, Russisch, Ukrainisch, Chinesisch (vereinfacht), Hindi, Portugiesisch und Persisch. Es folgt der Windows-Anzeigesprache; eine andere Sprache wählst du über das Rechtsklick-Menü (*Sprache der Oberfläche*) oder mit `Language=<Name oder Kürzel>` in der `3divi.ini` (zum Beispiel `Persian` oder `fa`; `auto` folgt Windows).
+
+Die Texte stehen in einfachen `.lng`-Dateien im Ordner `Languages`. Für eine neue Sprache kopierst du `Languages\Template.lng`, übersetzt die rechten Seiten und speicherst sie unter einem neuen Namen – sie erscheint dann in der Sprachliste.
+
+Korrekturen und neue Übersetzungen von Muttersprachlern sind sehr willkommen – schick sie bitte als [Issue](https://github.com/naderi/tc-3divi/issues) in diesem Repository.
+
 ## Lizenz
 
 Freeware – frei nutzbar, aber **nicht zum Verkauf**. Siehe [LICENSE](LICENSE). 3divi enthält die [Open Asset Import Library](https://github.com/assimp/assimp) (BSD), zlib und weitere Open-Source-Komponenten; ihre Lizenzen stehen in `THIRD-PARTY-LICENSES.txt` im Download.
