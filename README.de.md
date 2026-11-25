@@ -29,6 +29,7 @@ Dateien mit einer mehrfach verwendeten Endung werden am Inhalt erkannt. Eine `co
 - **Symbolleiste:** die Ansichten, das Drehen um 90°, der Wechsel der Oben-Achse, Zurücksetzen, Darstellung, Raster und Achsen als Buttons, dazu ein Button für das ganze Menü (Taste O blendet sie aus oder ein)
 - **Vorige / nächste Datei:** Bild↑ / Bild↓ (oder die Pfeil-Buttons in der Symbolleiste) zeigen die vorige oder nächste Datei des Ordners, die 3divi unterstützt, in natürlicher Namensreihenfolge
 - **Speichern unter** STL, OBJ oder PLY im Kontextmenü – mit deiner Drehung, die Oben-Achse wird für das Zielformat umgerechnet
+- **Textur laden** (Kontextmenü) legt ein beliebiges Bild (PNG, JPG, BMP, TGA, ...) aus einem Dateidialog im Ordner des Modells auf das Modell, praktisch für Modelle mit mehreren Texturen
 - **Bild kopieren** (Strg+C) legt die aktuelle Ansicht in die Zwischenablage
 - **Vorschaubilder** in der Miniaturansicht des Total Commander (Dateien bis 96 MB)
 - **Laden im Hintergrund** mit Fortschrittsanzeige, auch große Modelle lassen den Total Commander nicht einfrieren

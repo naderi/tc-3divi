@@ -29,6 +29,7 @@ Files with a shared extension are recognized by their content, so a `configure.a
 - **Toolbar:** the views, the 90° rotations, the up-axis switch, reset, shading mode, grid and axes as buttons, plus a button for the full menu (key O to hide or show)
 - **Previous / next file:** PgUp / PgDn (or the arrow buttons in the toolbar) show the previous or next file of the folder that 3divi supports, in natural name order
 - **Save as** STL, OBJ or PLY from the context menu – including your rotation, with the up axis converted for the target format
+- **Load texture** (context menu) applies any picture (PNG, JPG, BMP, TGA, ...) from a file dialog in the model's folder to the model, handy for models that come with several textures
 - **Copy image** (Ctrl+C) puts the current view on the clipboard
 - **Thumbnails** in Total Commander's thumbnail view (files up to 96 MB)
 - **Background loading** with a progress display, so even large models never freeze Total Commander
